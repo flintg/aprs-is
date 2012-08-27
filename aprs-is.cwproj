@@ -1,0 +1,50 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6DB0D5A0-8BCC-4AD3-97C4-D39B672D9B40}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>aprs-is</AssemblyName>
+    <OutputName>aprs-is</OutputName>
+    <Model>Dll</Model>
+    <ApplicationIcon>xpKeyLookup.ico</ApplicationIcon>
+    <stack_size>16384</stack_size>
+    <CopyCore>True</CopyCore>
+    <DefineConstants>
+    </DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>False</line_numbers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aprs-is.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="aprs-is001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="aprs-_RD.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="aprs-_RU.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="aprs-_SF.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
