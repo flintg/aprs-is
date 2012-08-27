@@ -1,0 +1,350 @@
+[APPLICATION]
+VERSION 33
+TODO Clarion ToDo
+PROCEDURE Main
+[COMMON]
+FROM Clarion
+MODIFIED '2011/12/05' '13:27:57'
+[PROMPTS]
+%GlobalUseABCClasess LONG  (0)
+%ClassItem UNIQUE DEFAULT  ('ClientSideTriggers:', 'ClientSideTriggers:ICS213', |
+  'ClientSideTriggers:ICmsg')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 0
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 0
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 0
+
+%ExternalSource DEFAULT  ('Statically Linked Library (LIB)')
+%ProgramAuthor DEFAULT  ('')
+%ProgramIcon DEFAULT  ('Ham213.ico')
+%MessageDescription LONG  (1)
+%GlobalExternal LONG  (0)
+%GenerateEmbedComments LONG  (0)
+%INIActive LONG  (0)
+%INIFile DEFAULT  ('Program Name.INI')
+%ININame DEFAULT  ('')
+%INIProgramIniLocation DEFAULT  ('APPDIR')
+%INICSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%CSIDLCompanyDir DEFAULT  ('')
+%CSIDLProductDir DEFAULT  ('')
+%CSIDLCreate LONG  (0)
+%INIInAppDirectory LONG  (0)
+%EnableExceptionMessage LONG  (0)
+%WindowFrameDragging LONG  (0)
+%UseDefaultXPManifest LONG  (0)
+%GenerateXPManifest LONG  (0)
+%LinkGenerateXPManifest LONG  (0)
+%AddVistaXPManifest LONG  (0)
+%VistaManifestExecutionLevel DEFAULT  ('asInvoker')
+%VistaManifestUIAccess LONG  (0)
+%NoThemedControlsDependency LONG  (0)
+%W7ManifestVista LONG  (0)
+%W7ManifestW7 LONG  (0)
+%ForceMakeTransparentXPManifest LONG  (0)
+%ForceMakeColorXPManifest LONG  (0)
+%ForceSHEETNoTheme LONG  (0)
+%ExtUIXPMenuEnableGlobal LONG  (0)
+%ExtUIXPMenuColorTypeGlobal DEFAULT  ('OFF')
+%ExtUIXPMenuDisableImageBar LONG  (1)
+%ExtUIXPMenuEnableRuntime LONG  (0)
+%ExtUIXPMenuRuntimeVar DEFAULT  ('')
+%ExtUIXPMenuColorLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorRightGlobal LONG  (12560039)
+%ExtUIXPMenuColorSelectionBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectionBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuSelVertical LONG  (1)
+%ExtUIXPMenuColorSelectionBorderGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorItemBackgroundGlobal LONG  (-2147483644)
+%ExtUIXPMenuColorNormalText LONG  (0)
+%ExtUIXPMenuColorSelectedText LONG  (0)
+%ExtUIXPMenuColorHotText LONG  (0)
+%ExtUIXPMenuFlat LONG  (1)
+%ExtUIXPMenuShowImageBar LONG  (0)
+%ExtUIXPMenuSeparator3D LONG  (1)
+%ExtUIXPMenuSeparatorFull LONG  (0)
+%ExtUIXPMenuVerticalLine LONG  (1)
+%ExtUIMDITabGlobal DEFAULT  ('DISABLE')
+%ExtUIMDITabStyleGlobal DEFAULT  ('Default')
+%ExtUITabStyleGlobal DEFAULT  ('Default')
+%WindowEnableEnhanceFocus LONG  (0)
+%SelectedText LONG  (1)
+%SelectedRadio LONG  (1)
+%SelectedSpin LONG  (1)
+%SelectedCheck LONG  (1)
+%SelectedDropList LONG  (1)
+%SelectedList LONG  (1)
+%SelectedDisplayChangeColor LONG  (1)
+%SelectedColor LONG  (65535)
+%SelectedStyle LONG  (1)
+%SelectedRequired LONG  (0)
+%SelectedRequiredColor LONG  (65535)
+%SelectedDisplayBox LONG  (1)
+%SelectedDisplayBoxFillColor LONG  (65535)
+%SelectedDisplayBoxBorderColor LONG  (0)
+%SelectedDisplayBoxBorderSize DEFAULT  ('2')
+%SelectedRequiredBox LONG  (0)
+%SelectedRequiredDisplayBoxFillColor LONG  (255)
+%SelectedRequiredDisplayBoxBorderColor LONG  (0)
+%SelectedCaret LONG  (1)
+%SelectedCaretColor LONG  (8421504)
+%SelectedCaretCharacter DEFAULT  ('<187>')
+%SelectedCaretCharacterSeparation DEFAULT  ('8')
+%ExcludeSelectedDropList LONG  (0)
+%GlobalUseEnterInsteadTab LONG  (0)
+%GlobalUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%GlobalUseEnterInsteadTabEnable DEFAULT  ('Enable')
+%GlobalUseEnterInsteadTabEnableValue DEFAULT  ('True')
+%GlobalReportPreviewMode DEFAULT  ('Procedure')
+%GlobalReportPreview DEFAULT  ('ReportPreview')
+%GlobalInterLine DEFAULT  ('0')
+%GlobalEnableAutoSizeColumn LONG  (0)
+%GlobalEnableListFormatManager LONG  (0)
+%GlobalUserFieldListFormatManager DEFAULT  ('1')
+%TableOrigin DEFAULT  ('Application')
+%FileEquate DEFAULT  ('LFM_CFile')
+%ConfigFilePRE DEFAULT  ('CFG')
+%ConfigFileOEM LONG  (0)
+%ConfigFileTHREAD LONG  (1)
+%ConfigFileENCRYPT LONG  (0)
+%ConfigFilePASSWORD DEFAULT  ('')
+%FormatNameSize DEFAULT  ('30')
+%FormatBufferSize DEFAULT  ('5120')
+%VariableBufferSize DEFAULT  ('2048')
+%ConfigFilePath DEFAULT  ('')
+%UseConfigFileName DEFAULT  ('Default')
+%ConfigFileNAME DEFAULT  ('Formats.FDB')
+%ColonCounter DEFAULT  ('')
+%WrongSymbol DEFAULT  ('')
+%DictionaryTableOrigin FILE  ()
+%GlobalLFMSortOrderMenuText DEFAULT  ('SortOrder')
+%GlobalBrowseActiveInvisible LONG  (1)
+%GlobalEnableRebase LONG  (0)
+%RBDMethod DEFAULT  ('Specify manually')
+%RBDImageBase DEFAULT  ('10000000')
+%DefaultGenerate LONG  (0)
+%DefaultCloseFile DEFAULT  ('Close the File')
+%DefaultRILogout LONG  (1)
+%WarnOnLogoutError LONG  (1)
+%LockRecoverTime DEFAULT  ('10')
+%DefaultThreaded DEFAULT  ('Use File Setting')
+%DefaultCreate DEFAULT  ('Use File Setting')
+%DefaultExternal DEFAULT  ('None External')
+%DefaultLocalExternal LONG  (0)
+%DefaultExternalSource DEFAULT  ('')
+%DefaultExternalAPP LONG  (0)
+%DefaultExport LONG  (0)
+%TriggersSupportEnableGlobal LONG  (0)
+%TriggersManagerType DEFAULT  ('TriggerManager')
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('ClientSideTriggers:ICS213') ('YES')
+WHEN  ('ClientSideTriggers:ICmsg') ('YES')
+
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 0
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('ClientSideTriggers:ICS213') (1)
+WHEN  ('ClientSideTriggers:ICmsg') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('ClientSideTriggers:ICS213') (1)
+WHEN  ('ClientSideTriggers:ICmsg') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('ClientSideTriggers:ICS213') ('')
+WHEN  ('ClientSideTriggers:ICmsg') ('')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('ClientSideTriggers:ICS213') (0)
+WHEN  ('ClientSideTriggers:ICmsg') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 1
+WHEN  ('ClientSideTriggers:ICmsg')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 1
+WHEN  ('ClientSideTriggers:ICmsg')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%DefaultOpenMode DEFAULT  ('Share')
+%DefaultUserAccess DEFAULT  ('Read/Write')
+%DefaultOtherAccess DEFAULT  ('Deny None')
+%GeneratePropDataPath LONG  (0)
+%PropDataPathLocation DEFAULT  ('CSIDLLIKEINI')
+%DataPathCSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%DataPathCSIDLCompanyDir DEFAULT  ('')
+%DataPathCSIDLProductDir DEFAULT  ('')
+%DataPathCSIDLCreate LONG  (0)
+%DataPathOtherDirectory DEFAULT  ('')
+%DataPathOtherDirectoryCreate LONG  (0)
+%OverrideGenerate DEPEND %File LONG TIMES 0
+
+%OverrideCloseFile DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideRILogout DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideThreaded DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideCreate DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideExternal DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideLocalExternal DEPEND %File LONG TIMES 0
+
+%OverrideExternalSource DEPEND %File DEFAULT TIMES 0
+
+%OverrideExternalAPP DEPEND %File LONG TIMES 0
+
+%OverrideExport DEPEND %File LONG TIMES 0
+
+%OverrideOpenMode DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideUserAccess DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideOtherAccess DEPEND %File DEFAULT TIMES 3
+WHEN  ('') ('Use Default')
+WHEN  ('ICS213') ('Use Default')
+WHEN  ('ICmsg') ('Use Default')
+
+%OverrideAbcSettings LONG  (0)
+%AbcSourceLocation DEFAULT  ('LINK')
+%AbcLibraryName DEFAULT  ('')
+%CWBrowseEIPManagerType DEFAULT  ('CWEIPManager')
+%EditInPlaceEntryType DEFAULT  ('EditEntryClass')
+%EditInPlaceTextType DEFAULT  ('EditTextClass')
+%EditInPlaceCheckType DEFAULT  ('EditCheckClass')
+%EditInPlaceSpinType DEFAULT  ('EditSpinClass')
+%EditInPlaceDropListType DEFAULT  ('EditDropListClass')
+%EditInPlaceDropComboType DEFAULT  ('EditDropComboClass')
+%EditInPlaceColorType DEFAULT  ('EditColorClass')
+%EditInPlaceFileType DEFAULT  ('EditFileClass')
+%EditInPlaceFontType DEFAULT  ('EditFontClass')
+%EditInPlaceMultiSelectType DEFAULT  ('EditMultiSelectClass')
+%EditInPlaceCalendarType DEFAULT  ('EditCalendarClass')
+%EditInPlaceLookupType DEFAULT  ('EditLookupClass')
+%EditInPlaceOtherType DEFAULT  ('EditEntryClass')
+%PrintPreviewType DEFAULT  ('PrintPreviewClass')
+%ReportTargetSelectorManagerType DEFAULT  ('ReportTargetSelectorClass')
+%CalendarManagerType DEFAULT  ('CalendarClass')
+%GlobalChangeColor LONG  (0)
+%GlobalColorSunday LONG  (255)
+%GlobalColorSaturday LONG  (255)
+%GlobalColorHoliday LONG  (32768)
+%GlobalColorOther LONG  (0)
+%GlobalSelectOnClose DEFAULT  ('Select and Close')
+%AppTemplateFamily DEFAULT  ('CLARION')
+%CWTemplateVersion DEFAULT  ('v8.0')
+%GlobalRequest DEFAULT  ('1')
+%SQLSchema DEFAULT  ('''af''')
+%ThreadManagement LONG  (1)
+%RecordLog LONG  (0)
+%RecordLogInsertUserID DEFAULT  ('ChangeID')
+%RecordLogInsertDate DEFAULT  ('ChangeDate')
+%RecordLogInsertTime DEFAULT  ('ChangeTime')
+%RecordLogChangeUserID DEFAULT  ('ChangeID')
+%RecordLogChangeDate DEFAULT  ('ChangeDate')
+%RecordLogChangeTime DEFAULT  ('ChangeTime')
+%RecordLogAssignUserID DEFAULT  ('glo:UserID')
+%RecordLogAssignDate DEFAULT  ('TODAY()')
+%RecordLogAssignTime DEFAULT  ('CLOCK()')
+[PERSIST]
+%GenerationCompleted DEPEND %Module DEFAULT TIMES 6
+WHEN  ('Ham213.clw') ('1')
+WHEN  ('Ham213001.clw') ('1')
+WHEN  ('Ham213002.clw') ('1')
+WHEN  ('aprs-is.clw') ('1')
+WHEN  ('aprs-is001.clw') ('1')
+WHEN  ('aprs-is002.clw') ('1')
+
+%LastTarget32 DEFAULT  ('1')
+%LastProgramExtension DEFAULT  ('EXE')
+%LastApplicationDebug DEFAULT  ('')
+%LastApplicationLocalLibrary DEFAULT  ('')
+[PROJECT]
+-- NAMESPACE ClarionDefaultNamespace
+#system win32 exe
+#model clarion dll
+#pragma link_option(icon=>xpKeyLookup.ico)
+#compile "aprs-is.clw" -- GENERATED
+#compile "aprs-is001.clw" -- GENERATED
+#compile "aprs-_RD.CLW" -- GENERATED
+#compile "aprs-_RU.CLW" -- GENERATED
+#compile "aprs-_SF.CLW" -- GENERATED
+#link "aprs-is.EXE"
