@@ -370,8 +370,8 @@ Window  WINDOW('APRS-IS Passcode Generator'),AT(,,237,73),FONT('MS Sans Serif',8
           BUTTON('&About'),AT(167,6,54,22),USE(?About:Button),LEFT,ICON(ICON:Asterisk),FLAT, |
             #ORDINAL(3)
           PROMPT('&Callsign:'),AT(8,7),USE(?Callsign:Prompt),#ORDINAL(4)
-          ENTRY(@s6),AT(77,7,60,10),USE(Callsign),MSG('Amateur Radio Service Callsign'),REQ, |
-            TIP('Amateur Radio Service Callsign'),#ORDINAL(5)
+          ENTRY(@s6),AT(77,7,60,10),USE(Callsign),UPR,MSG('Amateur Radio Service Callsign'), |
+            REQ,TIP('Amateur Radio Service Callsign'),#ORDINAL(5)
           PROMPT('APRS-IS Passcode:'),AT(8,21),USE(?APRS_IS_Passcode:Prompt),#ORDINAL(6)
           STRING(@s20),AT(76,21),USE(APRS_IS_Passcode),#ORDINAL(7)
         END
