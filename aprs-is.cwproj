@@ -6,7 +6,7 @@
     <OutputType>WinExe</OutputType>
     <AssemblyName>aprs-is</AssemblyName>
     <OutputName>aprs-is</OutputName>
-    <Model>Dll</Model>
+    <Model>Lib</Model>
     <stack_size>16384</stack_size>
     <CopyCore>True</CopyCore>
     <DefineConstants>
