@@ -7,7 +7,6 @@
     <AssemblyName>aprs-is</AssemblyName>
     <OutputName>aprs-is</OutputName>
     <Model>Dll</Model>
-    <ApplicationIcon>xpKeyLookup.ico</ApplicationIcon>
     <stack_size>16384</stack_size>
     <CopyCore>True</CopyCore>
     <DefineConstants>
@@ -30,19 +29,19 @@
     <line_numbers>False</line_numbers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="aprs-is.clw">
+    <Compile Include="APRS-IS.clw">
       <Generated>true</Generated>
     </Compile>
-    <Compile Include="aprs-is001.clw">
+    <Compile Include="APRS-_RD.CLW">
       <Generated>true</Generated>
     </Compile>
-    <Compile Include="aprs-_RD.CLW">
+    <Compile Include="APRS-_RU.CLW">
       <Generated>true</Generated>
     </Compile>
-    <Compile Include="aprs-_RU.CLW">
+    <Compile Include="APRS-_SF.CLW">
       <Generated>true</Generated>
     </Compile>
-    <Compile Include="aprs-_SF.CLW">
+    <Compile Include="Main_aprs-is.clw">
       <Generated>true</Generated>
     </Compile>
   </ItemGroup>

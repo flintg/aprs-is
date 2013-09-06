@@ -1,7 +1,6 @@
 [PROGRAM]
 [COMMON]
 FROM Clarion Clarion
-MODIFIED '2012/05/15' '14:41:43'
 [EMBED]
 EMBED %AfterGlobalIncludes
 [DEFINITION]

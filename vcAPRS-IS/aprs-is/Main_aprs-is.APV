@@ -6,7 +6,6 @@ FROM Clarion GENERATED
 NAME Main
 [COMMON]
 FROM Clarion Window
-MODIFIED '2012/05/15' '16:16:58'
 [DATA]
 LocalRequest             LONG
 !!> GUID('54cd7231-c685-49f6-b8b0-aa25bfde2ee5')
@@ -37,7 +36,6 @@ Callsign                 CSTRING(7) !Amateur Radio Service Callsign
 APRS_IS_Passcode         CSTRING(21) !Generated APRS-IS Passcode
 !!> GUID('a0246be8-5a46-4e85-9523-b31a8c8961bb'),PROMPT('APRS-IS Passcode:'),HEADER('APRS-IS Passcode'),MESSAGE('Generated APRS-IS Passcode'),TOOLTIP('Generated APRS-IS Passcode'),PICTURE(@s20),TYPEMODE(INS)
 [PROMPTS]
-%Parameters DEFAULT  ('')
 %ReturnValue FIELD  ()
 %WindowOperationMode DEFAULT  ('Use WINDOW setting')
 %INISaveWindow LONG  (1)
@@ -297,7 +295,7 @@ Generate:APRSISPasscode       ROUTINE
 !|  This bit interpreted from https://github.com/zamabe/APRS-callpass-tools
 !|    and http://cpansearch.perl.org/src/HESSU/Ham-APRS-FAP-1.18/IS.pm (Aarnio, OH2MQK & Hannikainen, OH7LZB)
 !|
-!|  To Do: 
+!|  To Do:
 !|    * strip station designators (i.e. -9)
 !|    * verify call sign against a web service before producing the code.
 !|
@@ -311,8 +309,8 @@ i         LONG,AUTO
   !-----------------------------
   curHash = 29666
   !-----------------------------
-  ! Process each character of the 
-  !   given call sign into the 
+  ! Process each character of the
+  !   given call sign into the
   !   algorithm.
   !-----------------------------
   LOOP i = 1 TO LEN(Callsign)
@@ -326,7 +324,7 @@ i         LONG,AUTO
     END
   END
   !-----------------------------
-  ! According to "zamabe" this 
+  ! According to "zamabe" this
   !  value should be 32767.
   ! According to Aarnio & Hannikainen
   !  this value should be 65535
@@ -380,7 +378,6 @@ Window  WINDOW('APRS-IS Passcode Generator'),AT(,,237,73),FONT('MS Sans Serif',8
 NAME AboutAPRS_ISPasscodeGenerator
 [COMMON]
 FROM Clarion Window
-MODIFIED '2012/05/15' '14:40:16'
 [DATA]
 LocalRequest             LONG
 !!> GUID('4cf87139-2e4e-4970-8656-9bbc4b3f612e')
@@ -404,7 +401,6 @@ ForceRefresh             LONG
 Author:URL               CSTRING(256) !URL to Author's site
 !!> GUID('29d03462-077d-48ac-af20-c1180e58668d'),PROMPT('URL:'),HEADER('URL'),MESSAGE('URL to Author''s site'),TOOLTIP('URL to Author''s site'),PICTURE(@s255),TYPEMODE(INS),READONLY
 [PROMPTS]
-%Parameters DEFAULT  ('')
 %ReturnValue FIELD  ()
 %WindowOperationMode DEFAULT  ('Use WINDOW setting')
 %INISaveWindow LONG  (1)

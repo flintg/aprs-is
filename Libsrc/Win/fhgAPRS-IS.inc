@@ -8,10 +8,10 @@ _fhgAPRSISPresent_ EQUATE(1)
 !-----------------------------------
 ! Main application settings
 !-----------------------------------
-app:Version         EQUATE('1.00.001')          !! Version resource
+app:Version         EQUATE('1.00.002')          !! Version resource
 app:Website         EQUATE('http://blog.eagleflint.com/category/amateur-radio/aprs-is/') !! Development thread
 app:Author          EQUATE('Flint Gatrell, N<216>FHG') !! Application author
-app:Copyright       EQUATE('<169> 2012 Flint Gatrell.<13,10>Portions copyrighted by Twenty Pines Resources, Inc., www.20pines.com') !! Copyright notice
+app:Copyright       EQUATE('<169> 2012-2013 Flint Gatrell.<13,10>Portions copyrighted by Twenty Pines Resources, Inc., www.20pines.com') !! Copyright notice
 app:License         EQUATE('This app is free for personal Amateur use.') !! License notice
 
 !-----------------------------------
